@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Anybody', sans-serif;
+  background-color: #fff7e6;
+}
+
+header {
+  background: #ffc0cb;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-family: 'Gulfs Display', sans-serif;
+}
+
+.menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.section {
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  background-color: #fff;
+}
+
+.section img {
+  width: 100%;
+  display: block;
+  border-bottom: 4px solid #ffc0cb;
+}
+
+.chat-button {
+  background: #ffef5e;
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 12px 18px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+  z-index: 999;
+}
+
+.text-block {
+  padding: 1rem;
+  background: #ffef5e;
+  color: #000;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2a2aff;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 1rem;
+  background-color: #ff725e;
+}
+
+.gallery img {
+  flex: 1 1 calc(50% - 10px);
+  border-radius: 10px;
+  object-fit: cover;
+  height: 150px;
+  border: 2px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .section {
+    max-width: 48%;
+  }
+
+  .gallery img {
+    height: 200px;
+  }
+}
